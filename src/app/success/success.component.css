@@ -1,0 +1,13 @@
+h3 {
+  background-color: green;
+  border: 5px solid green;
+  color: white;
+  width: fit-content;
+  padding: .75em;
+  border-radius: 10px;
+}
+
+h3:hover {
+  background-color: white;
+  color: green;
+}
