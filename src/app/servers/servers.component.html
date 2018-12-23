@@ -13,3 +13,11 @@
 </button>
 <p *ngIf="serverCreated">{{ serverName }} server was created!</p>
 <app-server *ngFor="let server of servers"></app-server>
+
+
+<button (click)="onButtonClick()">Display Details</button>
+<p *ngIf="paragraphStatus">CAN YOU SEE ME?!</p>
+<p>
+  <span *ngFor="let click of clicks"
+    [ngClass]="{blue: click >= 5}">{{ click }} </span>
+</p>

@@ -10,21 +10,29 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No server was created!';
   serverName = '';
   serverCreated = false;
-  servers = ['TestServer', 'TestServer 2']
+  servers = ['TestServer', 'TestServer 2'];
+  paragraphStatus = false;
+  clicks = [];
 
-  
-  constructor() { 
+
+  constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
-    }, 2000)
+    }, 2000);
   }
-  
+
   ngOnInit() {
   }
-  
+
   onCreateServer() {
     this.serverCreated = true;
-    this.serverCreationStatus = `${this.serverName} was created!`
+    this.serverCreationStatus = `${this.serverName} was created!`;
+  }
+
+  onButtonClick() {
+    this.clicks.push(this.clicks.length);
+    this.paragraphStatus = !this.paragraphStatus ? true : false;
+    console.log(this.paragraphStatus, this.clicks);
   }
 
 }
